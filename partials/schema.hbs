@@ -1,0 +1,17 @@
+{{!-- Please validate any customizations with Schema validator! (https://validator.schema.org/) --}}
+{{!-- Refer to the Schema.org Product Type for more information - https://schema.org/Product --}}
+
+<script type="application/ld+json" class="yext-schema-json" data-yext-id="{{id}}">
+{
+  "@context": "https://schema.org",
+  "@id": "{{id}}",
+  "@type": ["Product"],
+  "name": "{{name}}",
+  "description": "{{convertRTFToPlaintext richTextDescription}}",
+  "brand": "{{brand}}",
+  "color": "{{color}}"
+//  "size": "{{size}}",
+//  "sku": "{{sku}}",
+//  "gtin": "{{gtin}}"
+}
+</script>

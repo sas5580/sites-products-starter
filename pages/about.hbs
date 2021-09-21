@@ -28,13 +28,13 @@
         <section class="bg-white py-8">
             <div class="container py-8 px-6 mx-auto">
                 <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">About</a>
-                <p class="mt-8 mb-8 text-xl">{{global.name}} was founded in 2021 by 8 revered technology leaders.</p>
+                <p class="mt-8 mb-8 text-xl">{{global.name}} was founded in 2021 by 8 technology leaders.</p>
                 <p class="mt-8 mb-8 text-xl">Meet the team below!</p>
             </div>
         </section>
 
             <div class="container py-8 px-6 mx-auto pr-8 pl-8 pb-20">
-                <div class="grid grid-cols-4 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {{#each global.photoGallery}}
                         <img class="m-3 rounded-lg hover:grow hover:shadow-lg" title={{this.image.name}} src={{this.image.url}}>
                     {{/each}}
