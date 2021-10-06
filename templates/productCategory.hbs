@@ -4,6 +4,11 @@
         "$id": "product-categories",
         "source": "knowledgeGraph",
         "destination": "pages",
+      "filter": {
+        "entityTypes": [
+          "ce_productCategory"
+        ]
+      },
       "fields": [
         "id",
         "uid",
@@ -17,12 +22,7 @@
         "c_relatedProducts.price",
         "c_relatedProducts.color",
         "c_relatedProducts.richTextDescription"
-      ],
-      "filter": {
-        "entityTypes": [
-          "ce_productCategory"
-        ]
-      }
+      ]
     },
     "urlFormat": "{{slug}}"
 }
@@ -50,7 +50,6 @@
       <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">{{name}}</div>
       <p class="mt-8 mb-8">{{convertRTFToHTML richTextDescription}}</p>
     </div>
-    <h1 class="text-red">Hello virtusa!</h1>
     {{#each c_relatedProducts}}
       <div class="grid grid-cols-7 divide-gray-300 divide-y-4 gap-3 pl-10">
           <div class="col-span-2">
