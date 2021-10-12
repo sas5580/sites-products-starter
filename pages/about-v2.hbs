@@ -1,0 +1,43 @@
+---
+{
+    "urlFormat": "aboutv2.html"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us Version 2</title>
+    <meta name="description" content="About {{global.name}}">
+    {{>head}}
+    {{!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+    <div class="container mx-auto px-4">
+        <body class="bg-pink-100">
+            
+        {{>navbar}}
+
+        <section class="py-8">
+            <div class="container py-8 px-6 mx-auto">
+                <h1 class="text-5xl font-bold">About - Version 2 #pinkBackground</h1>
+                <p class="mt-8 mb-8 text-xl">{{global.name}} was founded in 2021 by 8 technology leaders.</p>
+                <p class="mt-8 mb-8 text-xl">Meet the team below!</p>
+            </div>
+        </section>
+
+            <div class="container py-8 px-6 mx-auto pr-8 pl-8 pb-20">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {{#each global.photoGallery}}
+                        <img class="m-3 rounded-lg hover:grow hover:shadow-lg" title={{this.image.name}} src={{this.image.url}}>
+                    {{/each}}
+                </div>
+            </div>
+
+        </body> 
+    </div>
+</html>
