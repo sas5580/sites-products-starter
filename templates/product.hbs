@@ -1,35 +1,31 @@
 ---
 {
     "stream": {
-        "$id": "nike-products-new-stream-name",
+        "$id": "product-entities",
         "source": "knowledgeGraph",
         "destination": "pages",
-      "filter": {
-        "savedFilterIds": [
-          "672564228"
-        ]
-      },
-     "localization": {
-         "locales": ["en"]
-      },
-      "fields": [
-        "id",
-        "uid",
-        "meta",
-        "richTextDescription",
-        "name",
-        "slug",
-        "price",
-        "color",
-        "brand",
-        "photoGallery",
-        "c_shortSlug"
-      ]
+        "filter": {
+            "entityTypes": [
+                "product"
+            ]
+        },
+        "fields": [
+            "id",
+            "uid",
+            "meta",
+            "richTextDescription",
+            "name",
+            "slug",
+            "price",
+            "color",
+            "brand",
+            "photoGallery"
+        ],
+        "localization": {
+            "locales": ["en"]
+        }
     },
-    "urlFormat": "{{slug}}",
-    "urlRedirects": [
-        "{{c_shortSlug}}"
-    ]
+    "urlFormat": "{{slug}}"
 }
 ---
 
