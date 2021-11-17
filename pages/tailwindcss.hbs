@@ -1,0 +1,51 @@
+---
+{
+    "urlFormat": "tailwindcss.html"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TailwindCSS Demo</title>
+    <meta name="description" content="About {{global.name}}">
+    {{>head}}
+    {{!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+    <div class="container mx-auto px-4">
+        <body class="bg-white">
+            {{>navbar}}
+            <section class="py-8">
+                <div class="container py-8 px-6 mx-auto">
+                    <h1 class="section text-5xl font-bold">TailwindCSS Demo</h1>
+                    <h2>Responsive Grids</h2>
+                    <div class="section flex flex-col gap-x-10 gap-y-10
+                        sm:grid grid-cols-2
+                        md:grid-cols-3
+                        lg:grid-cols-5">
+                        <div class="border p-10 rounded-xl text-3xl text-center text-white align-middle bg-pink-300">Card 1</div>    
+                        <div class="border p-10 rounded-xl text-3xl text-center text-white align-middle bg-pink-300">Card 2</div>    
+                        <div class="border p-10 rounded-xl text-3xl text-center text-white align-middle bg-pink-300">Card 3</div>    
+                        <div class="border p-10 rounded-xl text-3xl text-center text-white align-middle bg-pink-300">Card 4</div>    
+                        <div class="border p-10 rounded-xl text-3xl text-center text-white align-middle bg-pink-300">Card 5</div>    
+                    </div>
+
+                    <h2>More Grids</h2>
+                    <div class="section grid-demo-div">
+                        <div class="grid-card">Card 1</div> 
+                        <div class="grid-card">Card 1</div> 
+                        <div class="grid-card">Card 1</div> 
+                        <div class="grid-card">Card 1</div> 
+                        <div class="grid-card">Card 1</div> 
+                    </div>
+
+                </div>
+            </section>
+        </body> 
+    </div>
+</html>
