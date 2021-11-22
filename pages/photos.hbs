@@ -1,0 +1,59 @@
+---
+{
+    "urlFormat": "images.html"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photos Demo</title>
+    <meta name="description" content="About {{global.name}}">
+    {{>head}}
+    {{!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+</head>
+    <div class="container mx-auto px-4">
+        <body class="bg-white">
+            {{>navbar}}
+            <section class="py-8">
+                <div class="container py-8 px-6 mx-auto">
+                    <h1 class="section text-5xl font-bold">Image Resizing Demo</h1>
+                    <h2>Original Photo (920x1380)</h2>
+                    {{!-- <h3></h3> --}}
+                        <div class="section">
+                            <img src="{{global.photoDemo}}">
+                        </div>
+                    <h1>Yext Image Thumbnails (Resized):</h1>
+                    <h2>\{{dynamicImage url "700x700" true}} <span class="bg-yellow-200">Rendered Size: (619x928)</span></h2>
+                        <div class="section">
+                            <img src="{{dynamicImage global.photoDemo "700x700" true}}">
+                        </div>
+                    <h2>\{{dynamicImage url "300x300" true}} <span class="bg-yellow-200">Rendered Size: (300x450)</span></h2>
+                        <div class="section">
+                            <img src="{{dynamicImage global.photoDemo "300x300" true}}">
+                        </div>
+                    <h2>\{{dynamicImage url "100x100" true}} <span class="bg-yellow-200">Rendered Size: (196x294)</span></h2>
+                        <div class="section">
+                            <img src="{{dynamicImage global.photoDemo "100x100" true}}">
+                        </div>
+                </div>
+            </section>
+            <section class="mb-20">
+                <h1>Load Images Responsibly and Responsively</h1>
+                    <div>
+                        <h2 class="lg:bg-yellow-200">Show Large Image on Desktop</h2>
+                            <img class="hidden lg:block" src="{{dynamicImage global.photoDemo "700x700" true}}">
+                    </div>
+                    <div>
+                        <h2 class="bg-yellow-200 lg:bg-white">Show Small Image on Mobile</h2>
+                            <img class="block lg:hidden" src="{{dynamicImage global.photoDemo "100x100" true}}">
+                    </div>
+            </section>
+        </body> 
+    </div>
+</html>
