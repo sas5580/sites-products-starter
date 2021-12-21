@@ -13,6 +13,10 @@
             "id",
             "uid",
             "meta",
+            "c_relatedSite.c_header",
+            "c_relatedSite.c_footer",
+            "c_relatedSite.c_googleAnalytics",
+            "c_relatedSite.c_APIKeys",
             "richTextDescription",
             "name",
             "slug",
@@ -44,7 +48,7 @@
 
 <div class="container bg-white mx-auto px-4">
     <body>
-        {{>navbar}}
+        {{>navbar-siteEntity}}
         <div class="text-5xl text-center py-5"></div>
             <div class="grid grid-cols-2 divide-x gap-3 pl-10">
                 <div class="col-span-1">
@@ -71,6 +75,6 @@
     </body> 
 </div>
 
-{{>footer}}
+{{>footer-siteEntity}}
 
 </html>
