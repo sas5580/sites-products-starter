@@ -1,5 +1,27 @@
 ---
 {
+    "stream": {
+        "$id": "404-page",
+        "source": "knowledgeGraph",
+        "destination": "pages",
+        "filter": {
+            "savedFilterIds": [
+                "788464561"
+            ]
+        },
+        "fields": [
+            "id",
+            "uid",
+            "meta",
+            "c_header",
+            "c_footer",
+            "c_googleAnalytics",
+            "c_APIKeys"
+        ],
+        "localization": {
+            "locales": ["en"]
+        }
+    },
     "urlFormat": "404.html"
 }
 ---
@@ -46,6 +68,7 @@
 
                 </div>
             </section>
+        {{>footer c_footer}}
         </body> 
     </div>
 </html>

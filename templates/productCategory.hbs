@@ -14,6 +14,7 @@
         "uid",
         "name",
         "slug",
+        "c_relatedSite.name",
         "c_relatedSite.c_header",
         "c_relatedSite.c_footer",
         "c_relatedSite.c_googleAnalytics",
@@ -51,7 +52,7 @@
   <div class="container mx-auto px-4">
     <body>
         
-    {{>navbar-siteEntity}}
+    {{>navbar c_relatedSite}}
 
     <div class="container py-8 px-6 mx-auto">
       <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">{{name}}</div>
@@ -86,6 +87,6 @@
     </body> 
   </div>
 
-{{>footer-siteEntity}}
+{{>footer c_relatedSite}}
 
 </html>

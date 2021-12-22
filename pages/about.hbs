@@ -1,9 +1,29 @@
 ---
 {
-    "urlFormat": "about.html",
-    "urlRedirects": [
-        "/about-us.html"
-    ]
+    "stream": {
+        "$id": "about-page",
+        "source": "knowledgeGraph",
+        "destination": "pages",
+        "filter": {
+            "savedFilterIds": [
+                "788464561"
+            ]
+        },
+        "fields": [
+            "id",
+            "uid",
+            "meta",
+            "name",
+            "c_header",
+            "c_footer",
+            "c_googleAnalytics",
+            "c_APIKeys"
+        ],
+        "localization": {
+            "locales": ["en"]
+        }
+    },
+    "urlFormat": "about.html"
 }
 ---
 
@@ -23,7 +43,7 @@
     <div class="container mx-auto px-4">
         <body>
             
-        {{>navbar}}
+        {{>navbar c_header}}
 
         <section class="bg-white py-8">
             <div class="container py-8 px-6 mx-auto">
@@ -41,6 +61,7 @@
                 </div>
             </div>
 
-        </body> 
+        </body>
+      {{>footer c_footer}}
     </div>
 </html>

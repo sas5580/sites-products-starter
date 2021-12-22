@@ -13,6 +13,7 @@
             "id",
             "uid",
             "meta",
+            "c_relatedSite.name",
             "c_relatedSite.c_header",
             "c_relatedSite.c_footer",
             "c_relatedSite.c_googleAnalytics",
@@ -48,7 +49,7 @@
 
 <div class="container bg-white mx-auto px-4">
     <body>
-        {{>navbar-siteEntity}}
+        {{>navbar c_relatedSite}}
         <div class="text-5xl text-center py-5"></div>
             <div class="grid grid-cols-2 divide-x gap-3 pl-10">
                 <div class="col-span-1">
@@ -75,6 +76,6 @@
     </body> 
 </div>
 
-{{>footer-siteEntity}}
+{{>footer c_relatedSite}}
 
 </html>

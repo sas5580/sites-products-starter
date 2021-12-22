@@ -1,5 +1,28 @@
 ---
 {
+    "stream": {
+        "$id": "images-page",
+        "source": "knowledgeGraph",
+        "destination": "pages",
+        "filter": {
+            "savedFilterIds": [
+                "788464561"
+            ]
+        },
+        "fields": [
+            "id",
+            "uid",
+            "meta",
+            "name",
+            "c_header",
+            "c_footer",
+            "c_googleAnalytics",
+            "c_APIKeys"
+        ],
+        "localization": {
+            "locales": ["en"]
+        }
+    },
     "urlFormat": "images.html"
 }
 ---
@@ -19,7 +42,7 @@
 </head>
     <div class="container mx-auto px-4">
         <body class="bg-white">
-            {{>navbar}}
+            {{>navbar c_header}}
             <section class="py-8">
                 <div class="container py-8 px-6 mx-auto">
                     <h1 class="section text-5xl font-bold">Image Resizing Demo</h1>
@@ -54,6 +77,7 @@
                             <img class="block lg:hidden" src="{{dynamicImage global.photoDemo "100x100" true}}">
                     </div>
             </section>
+          {{>footer c_footer}}
         </body> 
     </div>
 </html>
