@@ -27,7 +27,7 @@
     },
     "livePreview": {
         "serve_setup_cmd": "npm install && npm run build",
-        "serve_cmd": "npx serve assets"
+        "serve_cmd": "npx serve -l 8080 assets"
     },
     "watch_cmd": "npm run watch"
 }
